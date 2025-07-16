@@ -5,9 +5,9 @@ function ArrayListItems() {
     const [items, setItems] = useState(["apple","banana"]);
     function addToList() {
         const newItem = document.getElementById("inputArray").value;
+        if(newItem.trim() === "") return;
         setItems(i=> [...i,newItem]);
         document.getElementById("inputArray").value = "";
-
     }
     function handleEnterKey(e){
         if(e.key === "Enter"){
